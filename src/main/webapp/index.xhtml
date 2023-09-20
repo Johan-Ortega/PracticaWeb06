@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <f:view>
+            <h:form>
+                <p:outputLabel for="txtA" value="Valor A"/>
+                <p:inputText id="txtA" value="#{calculadoraBean.a}" required="true"/>
+                <br/>
+                <p:outputLabel for="txtB" value="Valor B"/>
+                <p:inputText id="txtB" value="#{calculadoraBean.b}" required="true"/>
+                <br/>
+                <p:commandButton actionListener="#{calculadoraBean.sumar()}"/>
+                <p:messages id="resultado" showDetail="true" closable="true">
+                    <p:autoUpdate/>
+                </p:messages>
+                
+            </h:form>
+        </f:view>
+        
+        Hello from Facelets
+    </h:body>
+</html>
+
